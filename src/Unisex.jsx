@@ -51,7 +51,7 @@ const Unisex = () => {
 
   return (
     <div className="unisex mt-5">
-      <h1 style={{padding:'20px'}}>Unisex Shoes</h1>
+      <h1 style={{padding:'20px', textAlign:'center'}}>Unisex Shoes</h1>
       <div className="row" style={{maxWidth:'1600px', display:'flex', margin:'auto'}}>
         <div className="col-12 col-md-3">
           <h4>Shop by Brand</h4>

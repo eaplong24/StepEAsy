@@ -6,6 +6,8 @@ const Navbar = () => {
     const { cartItems } = useContext(CartContext);
     const cartItemCount = cartItems.length;
     const [showModal, setShowModal] = useState(false);
+    const [userName, setUserName] = useState('');
+    const [password, setPassword] = useState('');
 
     const openModal = () => {
         setShowModal(true);
@@ -13,6 +15,20 @@ const Navbar = () => {
 
     const closeModal = () => {
         setShowModal(false);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Perform form validation logic
+        // Example: Check if all required fields are filled
+        if (userName.trim() === '' || password.trim() === '') {
+            // Display error or show validation message
+            console.log('Please fill in all required fields.');
+            return;
+        }
+
+        // Continue with form submission or other logic
+        console.log('Form submitted!');
     };
 
     return (
@@ -71,41 +87,61 @@ const Navbar = () => {
         {showModal && (
             <div className="modal">
             <div className='modal-content' id='navModal-content' style={{maxWidth:'80%'}}>
-                <form className="row g-3 needs-validation d-flex" noValidate>
-                <div className="col-12">
-                    <div className="form-outline">
-                    <input type="text" className="form-control" id="validationCustom01" required />
-                    <label htmlFor="validationCustom01" className="form-label">Username</label>
-                    <div className="valid-feedback">Looks good!</div>
+                <form onSubmit={handleSubmit}>
+                    <div className='form-floating mb-3'>
+                        <input 
+                            type="text"
+                            className='form-control'
+                            id='Username'
+                            onChange={(e) => setUserName(e.target.value)}
+                            required
+                        />
+                        <label htmlFor="floatingFirstName">Username</label>
                     </div>
-                </div>
-                <div className="col-12">
-                    <div className="form-outline">
-                    <input type="password" className="form-control" id="validationCustom02" required />
-                    <label htmlFor="validationCustom02" className="form-label">Password</label>
-                    <div className="invalid-feedback">Please provide a valid password.</div>
+                    <div className='form-floating mb-3'>
+                        <input 
+                            type="password"
+                            className='form-control'
+                            id='Password'
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                        <label htmlFor="floatingFirstName">Password</label>
                     </div>
-                </div>
-                <div className="col-12">
-                    <button className="btn w-100" 
-                        type="submit"
-                        style={{backgroundColor:'#19204E', color:'white'}}
-                    >
-                        Log In
-                    </button>
-                </div>
-                <hr className="col-12" />
-                <div className="col-12">
-                    <button className="btn w-100" 
-                        type="button" 
-                        onClick={closeModal}
-                        style={{backgroundColor:'#df1b3f', color:'white'}}
-                    >
-                        <Link to='logIn'
-                            >Create New Account
-                        </Link>
-                    </button>
-                </div>
+                    {/* <div className="col-12">
+                        <div className="form-outline">
+                        <input type="text" className="form-control" id="validationCustom01" required />
+                        <label htmlFor="validationCustom01" className="form-label">Username</label>
+                        <div className="valid-feedback">Looks good!</div>
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-outline">
+                        <input type="password" className="form-control" id="validationCustom02" required />
+                        <label htmlFor="validationCustom02" className="form-label">Password</label>
+                        <div className="invalid-feedback">Please provide a valid password.</div>
+                        </div>
+                    </div> */}
+                    <div className="col-12">
+                        <button className="btn w-100" 
+                            type="submit"
+                            style={{backgroundColor:'#19204E', color:'white'}}
+                        >
+                            Log In
+                        </button>
+                    </div>
+                    <hr className="col-12" />
+                    <div className="col-12">
+                        <button className="btn w-100" 
+                            type="button" 
+                            onClick={closeModal}
+                            style={{backgroundColor:'#df1b3f', color:'white'}}
+                        >
+                            <Link to='logIn'
+                                >Create New Account
+                            </Link>
+                        </button>
+                    </div>
                 </form>
             </div>
             </div>

@@ -89,13 +89,13 @@ const AboutUs = () => {
                 <div className="row" style={{textAlign:'center'}}>
                   <h1 className="text-4xl font-bold">The Team</h1>
                   <div className="col-12 col-lg-6">
-                    <img src='./src/assets/img/prof1a.png' alt="Team Member 1" />
-                    <h3>John Doe</h3>
+                    <img src='./img/prof1a.png' alt="Team Member 1" />
+                    <h3>Efren Albert Rosales</h3>
                     <p>Co-Founder</p>
                   </div>
                   <div className="col-12 col-lg-6">
-                    <img src='./src/assets/img/prof2a.png' alt="Team Member 2" />
-                    <h3>Jane Smith</h3>
+                    <img src='./img/prof2a.png' alt="Team Member 2" />
+                    <h3>Mc Matt San Balbuena</h3>
                     <p>Co-Founder</p>
                   </div>
                 </div>

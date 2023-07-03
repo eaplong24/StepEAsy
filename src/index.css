@@ -654,6 +654,13 @@ body {
 }
 
 /* aboutUS */
+
+
+.nav-pills .nav-link.active {
+  background-color: #df1b3f;
+}
+
+
 @media (max-width: 600px) {
   .aboutUs .nav {
     align-items: center;
@@ -699,6 +706,9 @@ body {
   }
   .aboutUs img {
     width: 320px;
+  }
+  .aboutUs p {
+    font-size: 20px;
   }
 }
 
