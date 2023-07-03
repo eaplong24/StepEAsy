@@ -11,7 +11,7 @@ const Carousel = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src='./src/assets/img/nike1.jpg' className="d-block w-100" style={{ filter: 'brightness(85%)' }} alt="..." />
+            <img src='./img/nike1.jpg' className="d-block w-100" style={{ filter: 'brightness(85%)' }} alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5>Get the best deals now!</h5>
               <p>Sign up now to get our free shipping voucher on your first order</p>
@@ -22,7 +22,7 @@ const Carousel = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src='./src/assets/img/puma1.jpg' className="d-block w-100" style={{ filter: 'brightness(70%)' }} alt="..." />
+            <img src='./img/puma1.jpg' className="d-block w-100" style={{ filter: 'brightness(70%)' }} alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5>Get the best deals now!</h5>
               <p>Sign up now to get our free shipping voucher on your first order</p>
@@ -33,7 +33,7 @@ const Carousel = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src='./src/assets/img/adidas.jpg' className="d-block w-100" alt="..." />
+            <img src='./img/adidas.jpg' className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5>Get the best deals now!</h5>
               <p>Sign up now to get our free shipping voucher on your first order</p>

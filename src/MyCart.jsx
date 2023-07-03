@@ -50,7 +50,7 @@ const MyCart = () => {
     <div className="myCart">
       <h1 style={{textAlign:'center'}}>My Cart</h1>
       {cartItems.length === 0 ? (
-        <p>No items in the cart</p>
+        <p style={{textAlign:'center'}}>No items in the cart</p>
       ) : ( 
         <div className="row d-flex" >
           {/* <ul className='col-md-12 col-lg-9 col-xl-9' id='cartItems'> */}
