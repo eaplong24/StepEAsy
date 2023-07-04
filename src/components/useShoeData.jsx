@@ -5,19 +5,19 @@ const useShoeData = () => {
 
   
 // ------updated API fetching
-  useEffect(() => {
-    fetch('https://shoes-collections.p.rapidapi.com/shoes', {
-      headers: {
-        'X-RapidAPI-Host': 'shoes-collections.p.rapidapi.com',
-        'X-RapidAPI-Key': 'e7731b38a7mshaa11a464dc916acp19f3e2jsnaaf9b81a2f98'
-      }
-    })
-      .then(res => res.json())
-      .then(data => setShoesData(data))
-      .catch(error => {
-        console.log('Error', error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://shoes-collections.p.rapidapi.com/shoes', {
+  //     headers: {
+  //       'X-RapidAPI-Host': 'shoes-collections.p.rapidapi.com',
+  //       'X-RapidAPI-Key': 'e7731b38a7mshaa11a464dc916acp19f3e2jsnaaf9b81a2f98'
+  //     }
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => setShoesData(data))
+  //     .catch(error => {
+  //       console.log('Error', error);
+  //     });
+  // }, []);
 
 //  -------- old fetching
     // useEffect(() => {
@@ -45,14 +45,14 @@ const useShoeData = () => {
   // }, []);
 
 // -------local fetchng
-  // useEffect(() => {
-  //   fetch('http://localhost:8000/shoes')
-  //     .then(res => res.json())
-  //     .then(data => setShoesData(data))
-  //     .catch(error => {
-  //       console.log('Error', error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch('http://localhost:8000/shoes')
+      .then(res => res.json())
+      .then(data => setShoesData(data))
+      .catch(error => {
+        console.log('Error', error);
+      });
+  }, []);
 
   return shoesData;
 };
