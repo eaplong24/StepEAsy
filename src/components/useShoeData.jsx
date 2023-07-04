@@ -9,7 +9,7 @@ const useShoeData = () => {
     fetch('https://shoes-collections.p.rapidapi.com/shoes', {
       headers: {
         'X-RapidAPI-Host': 'shoes-collections.p.rapidapi.com',
-        'X-RapidAPI-Key': '4b5077e521msh0693c94cb4d1983p192ef5jsn7acaf91a5d7a'
+        'X-RapidAPI-Key': 'e7731b38a7mshaa11a464dc916acp19f3e2jsnaaf9b81a2f98'
       }
     })
       .then(res => res.json())
