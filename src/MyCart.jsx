@@ -53,8 +53,7 @@ const MyCart = () => {
         <p style={{textAlign:'center'}}>No items in the cart</p>
       ) : ( 
         <div className="row d-flex" >
-          {/* <ul className='col-md-12 col-lg-9 col-xl-9' id='cartItems'> */}
-          <div className='col-12 col-lg-8 col-xl-9' id='cartItemsList'>
+          <div className='col-12 col-sm-12 col-md-8 col-lg-8 col-xl-9' id='cartItemsList'>
             <ul id='cartItems'>
               {cartItems.map((item, index) => (
                 <li key={index}>
@@ -74,7 +73,7 @@ const MyCart = () => {
                       <h4 className='mb-3'>{item.name}</h4>
                       <p style={{color:'#df1b3f'}}>Price: ${item.price}</p>
                     </div>
-                    <div className='col-6 col-md-4 col-xl-2'> 
+                    <div className='col-6 col-sm-4 col-md-4 col-xl-2'> 
                       <p >
                         Qty: <br />
                         <input
@@ -88,35 +87,52 @@ const MyCart = () => {
                         />
                       </p>
                     </div>
-                    <div className='col-6 col-md-4 col-xl-1'>
+                    <div className='col-6 col-sm-4 col-md-4 col-xl-1'>
                       <p>Total: <br />${calculateItemTotal(item)}</p>
                     </div>
-                    <div className='col-12 col-md-4 col-xl-1'>
-                      <i onClick={() => handleDeleteItem(item.id)} 
+                    <div className='col-12 col-sm-4 col-md-4 col-xl-1' style={{alignItems:'center'}}>
+                      <button onClick={() => handleDeleteItem(item.id)} 
                         className="fa-solid fa-trash fa-xl" 
                         style={{fontWeight:'bolder'}}>
-                      </i>
+                      </button>
                     </div>
                   </label>
                 </li>
               ))}
             </ul>
           </div>
-          <div className='col-12 col-lg-4 col-xl-3' id='cartComputationDiv'>
+
+          <div className='col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3' id='cartComputationDiv'>
             <div id='cartComputation'>
-              {/* <div className='col-md-12 col-lg-3 col-xl-3' id='cartComputation'> */}
-              <h5>Order Summary</h5>
               <div>
-                <p>Cart Total: ${calculateCartTotal()}</p>
-                <p>Discount:</p>
-                <p>Shipping Charge:</p>
-                <p>Estimated Tax:</p>
-                <hr />
-                <h5>Grand Total: ${calculateCartTotal()}</h5>
+                <h5>Order Summary</h5>
+                <table className='table'>
+                  <tbody>
+                    <tr>
+                      <td>Cart Total:</td>
+                      <td style={{textAlign:'right'}}>${calculateCartTotal()}</td>
+                    </tr>
+                    <tr>
+                      <td>Discount:</td>
+                      <td style={{textAlign:'right'}}>$0</td>
+                    </tr>
+                    <tr>  
+                      <td>Shipping Charge:</td>
+                      <td style={{textAlign:'right'}}>$0</td>
+                    </tr>
+                    <tr>
+                      <td>Estimated Tax:</td>
+                      <td style={{textAlign:'right'}}>$0</td>
+                    </tr>
+                    <tr>
+                      <td><h5>Grand Total:</h5></td>
+                      <td style={{color:'#df1b3f', textAlign:'right'}}><h5>${calculateCartTotal()}</h5></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
-          
         </div>
       )}
     </div>
