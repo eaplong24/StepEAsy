@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState} from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from './components/CartContext';
 
@@ -108,20 +108,6 @@ const Navbar = () => {
                         />
                         <label htmlFor="floatingFirstName">Password</label>
                     </div>
-                    {/* <div className="col-12">
-                        <div className="form-outline">
-                        <input type="text" className="form-control" id="validationCustom01" required />
-                        <label htmlFor="validationCustom01" className="form-label">Username</label>
-                        <div className="valid-feedback">Looks good!</div>
-                        </div>
-                    </div>
-                    <div className="col-12">
-                        <div className="form-outline">
-                        <input type="password" className="form-control" id="validationCustom02" required />
-                        <label htmlFor="validationCustom02" className="form-label">Password</label>
-                        <div className="invalid-feedback">Please provide a valid password.</div>
-                        </div>
-                    </div> */}
                     <div className="col-12">
                         <button className="btn w-100" 
                             type="submit"
