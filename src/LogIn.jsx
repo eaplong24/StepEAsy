@@ -17,6 +17,17 @@ const LogIn = () => {
             return;
         }
 
+        // Convert form data to JSON
+        const formData = {
+            firstName,
+            lastName,
+            email,
+            password,
+            confirmPassword
+        };
+        const jsonData = JSON.stringify(formData);
+        console.log(jsonData);
+
         // Continue with form submission or other logic
         console.log('Form submitted!');
     };
