@@ -806,11 +806,24 @@ body {
 }
 
 /* aboutUS */
+.nav-pills .nav-link {
+  border: 1px solid;
+  border-color: #df1b3f;
+}
+
 .nav-pills .nav-link.active {
   background-color: #df1b3f;
+  box-shadow: 5px 3px 9px #df1b3f
+}
+
+.nav-pills .nav-link.active:hover {
+  color: white;
+  border: 1px solid;
+  border-color: white;
 }
 .nav-pills .nav-link:hover {
   color: #df1b3f;
+  box-shadow: 5px 3px 9px #df1b3f;
 }
 
 

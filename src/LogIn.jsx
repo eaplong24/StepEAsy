@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const LogIn = () => {
     const [firstName, setFirstName] = useState('');
@@ -25,8 +26,18 @@ const LogIn = () => {
             password,
             confirmPassword
         };
-        const jsonData = JSON.stringify(formData);
-        console.log(jsonData);
+
+        // Send JSON data to server
+        axios.post('http://localhost:3000/users', formData)
+            .then(response => {
+                // Handle successful response
+                console.log('Form submitted!');
+                console.log(response.data); // Response data from the server
+            })
+            .catch(error => {
+                // Handle error
+                console.error('Error submitting form:', error);
+            });
 
         // Continue with form submission or other logic
         console.log('Form submitted!');
